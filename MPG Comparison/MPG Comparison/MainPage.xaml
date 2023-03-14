@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MPG_Comparison.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0">
+
+
+            <!-- Prompting for the user to enter values -->
+
+                <Label x:Name="lblPromptTripMiles"
+                Text="Enter trip mileage"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Enter your trip mileage "
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="entTripMiles"
+               Placeholder="Enter text"
+                   Keyboard="Numeric"
+               HorizontalOptions="Center"/>
+
+
+            <Label  x:Name="lblPromptGallonsFilled"
+                Text="Enter gallons filled"
+                SemanticProperties.HeadingLevel="Level3"
+                SemanticProperties.Description="Enter your trip mileage "
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="entGallonsFilled"
+               Placeholder="Enter"
+               Keyboard="Numeric"
+               HorizontalOptions="Center"/>
+
+
+            <Label x:Name="lblPromptReportedFuelEconomy"
+                Text="Enter vehicle's reported MPG"
+                SemanticProperties.HeadingLevel="Level4"
+                SemanticProperties.Description="Enter your trip mileage "
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Entry x:Name="entReportedFuelEconomy"
+               Placeholder="Enter"
+               Keyboard="Numeric"
+               HorizontalOptions="Center"/>
+               
+            
+            <Button x:Name="btnSubmit"
+                Text="Submit"
+                SemanticProperties.Hint="Submits the entered values"
+                Clicked="SubmitValues"
+                HorizontalOptions="Center" />
+
+
+
+            <!-- Showing the user the calculated values -->
+
+
+            <Label x:Name="lblActualFuelEconomy"
+                Text="Actual fuel economy since you last refill: "
+                SemanticProperties.HeadingLevel="Level6"
+                SemanticProperties.Description="Enter your trip mileage "
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Label x:Name="lblPercentError"
+                Text="Percent error of vehicle's reported mileage: "
+                SemanticProperties.HeadingLevel="Level8"
+                SemanticProperties.Description="Enter your trip mileage "
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
